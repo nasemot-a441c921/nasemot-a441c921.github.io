@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>黑料-娱乐圈内幕与争议话题_黑料网_黑料不打烊真实爆料</title>
+    <meta name="description" content="黑料专题聚合娱乐圈最新内幕、争议事件与网络热议话题，提供黑料不打烊的深度解析、人物关系梳理、事件时间线与真实网友评论，帮你快速了解黑料背后的来龙去脉，理性吃瓜不迷路。">
+    <meta name="keywords" content="黑料,黑料网,黑料不打烊,娱乐圈黑料,黑料爆料">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-body: #f7f5f0;
+            --bg-card: #ffffff;
+            --bg-soft: #f0ede8;
+            --text-primary: #1e1b1a;
+            --text-secondary: #4f4a47;
+            --text-muted: #7e7772;
+            --accent: #b83b2d;
+            --accent-soft: #f9e6e2;
+            --border-light: #e6dfd8;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --radius-card: 20px;
+            --radius-btn: 40px;
+            --max-width: 1200px;
+            --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        body {
+            background-color: var(--bg-body);
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 导航 */
+        .nav-bar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(184, 59, 45, 0.3);
+        }
+        .logo-text {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        .nav-search {
+            display: flex;
+            align-items: center;
+            background: var(--bg-soft);
+            border-radius: var(--radius-btn);
+            padding: 6px 16px;
+            gap: 8px;
+        }
+        .nav-search input {
+            border: none;
+            background: transparent;
+            padding: 8px 0;
+            font-size: 14px;
+            outline: none;
+            width: 140px;
+        }
+        .nav-search button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+        /* Banner */
+        .hero-section {
+            background: linear-gradient(135deg, #fff5f0 0%, #f9efe9 100%);
+            border-radius: 0 0 32px 32px;
+            padding: 48px 0 56px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1e1b1a;
+        }
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+        .hero-search {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 60px;
+            padding: 8px 8px 8px 24px;
+            box-shadow: var(--shadow-md);
+            width: 100%;
+            max-width: 580px;
+            margin-bottom: 28px;
+        }
+        .hero-search input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            padding: 10px 0;
+            color: var(--text-primary);
+        }
+        .hero-search input::placeholder {
+            color: #b0a8a1;
+        }
+        .hero-search button {
+            background: var(--accent);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .hero-search button:hover {
+            background: #9e2f23;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 12px;
+        }
+        .hero-tags a {
+            background: #fff;
+            border: 1px solid var(--border-light);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+        .hero-tags a:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        /* 通用section */
+        .section {
+            margin-bottom: 56px;
+        }
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            color: var(--text-primary);
+        }
+        .section-more {
+            font-size: 14px;
+            color: var(--text-muted);
+            border-bottom: 1px dashed var(--border-light);
+            padding-bottom: 2px;
+        }
+        .section-more:hover {
+            color: var(--accent);
+        }
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 22px;
+        }
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .card-tag {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+            align-self: flex-start;
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 12px;
+        }
+        /* 最新更新列表 */
+        .update-list {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+        .update-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 22px;
+            border-bottom: 1px solid var(--border-light);
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .update-item:last-child {
+            border-bottom: none;
+        }
+        .update-name {
+            font-weight: 600;
+            min-width: 150px;
+            color: var(--text-primary);
+        }
+        .update-time {
+            font-size: 13px;
+            color: var(--text-muted);
+            min-width: 90px;
+        }
+        .update-summary {
+            font-size: 14px;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+        /* 分类入口 */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 14px;
+        }
+        .category-item {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 18px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-light);
+            transition: 0.2s;
+        }
+        .category-item:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+        /* 深度解析 */
+        .deep-analysis {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        .deep-analysis p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .deep-analysis h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
+        }
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 22px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-q {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .faq-a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        /* 评论 */
+        .comment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .comment-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 16px 20px;
+            border: 1px solid var(--border-light);
+        }
+        .comment-user {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: var(--accent);
+        }
+        .comment-date {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .comment-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        /* 资讯卡片 */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 20px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+        .news-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .news-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .news-summary {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        /* 页脚 */
+        .footer {
+            background: #1e1b1a;
+            color: #b8b0aa;
+            padding: 48px 0 32px;
+            margin-top: 40px;
+            border-radius: 32px 32px 0 0;
+        }
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .footer-logo {
+            font-weight: 800;
+            font-size: 26px;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .footer-desc {
+            font-size: 14px;
+            max-width: 320px;
+            line-height: 1.7;
+        }
+        .footer-links {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .footer-col p {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #b8b0aa;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #3a3532;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        /* 响应式 */
+        @media (max-width: 760px) {
+            .hero-section {
+                padding: 32px 0 40px;
+            }
+            .hero-search {
+                flex-direction: column;
+                background: transparent;
+                padding: 0;
+                box-shadow: none;
+                gap: 12px;
+            }
+            .hero-search input {
+                background: #fff;
+                width: 100%;
+                border-radius: 40px;
+                padding: 14px 20px;
+                box-shadow: var(--shadow-sm);
+            }
+            .hero-search button {
+                width: 100%;
+                padding: 14px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .deep-analysis {
+                padding: 22px;
+            }
+            .update-item {
+                padding: 14px 16px;
+            }
+            .update-name {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b83b2d'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3E黑%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- 导航 -->
+    <header class="nav-bar">
+        <div class="container nav-inner">
+            <div class="logo-badge">
+                <div class="logo-icon">黑</div>
+                <span class="logo-text">黑料</span>
+            </div>
+            <nav class="nav-links">
+                <a href="/#hot">热门黑料</a>
+                <a href="/#latest">最新动态</a>
+                <a href="/#analysis">深度解析</a>
+                <a href="/#faq">常见问题</a>
+                <a href="/#comments">网友评论</a>
+                <a href="/#news">资讯</a>
+            </nav>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索黑料..." aria-label="搜索黑料">
+                <button aria-label="搜索">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Banner -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1><span>黑料</span>不打烊 · 娱乐圈内幕与争议话题聚合</h1>
+            <p class="hero-desc">专注整理全网热议黑料事件，梳理人物关系与时间线，提供深度解析与真实网友评论。吃瓜不站队，理性看内幕。</p>
+            <div class="hero-search">
+                <input type="text" placeholder="搜索你感兴趣的黑料关键词…" aria-label="搜索黑料">
+                <button>立即搜索</button>
+            </div>
+            <div class="hero-tags">
+                <a href="/#hot">热门黑料</a>
+                <a href="/#latest">最新爆料</a>
+                <a href="/#analysis">深度解析</a>
+                <a href="/#faq">吃瓜指南</a>
+                <a href="/#comments">网友评论</a>
+                <a href="/#news">资讯速递</a>
+                <a href="/#category">分类索引</a>
+                <a href="/#update">更新追踪</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 内容简介 -->
+        <section class="section" id="intro">
+            <div class="section-header">
+                <h2 class="section-title">关于黑料专题</h2>
+                <a href="/#hot" class="section-more">更多推荐 →</a>
+            </div>
+            <div class="deep-analysis">
+                <p>“黑料”这个词在当下的网络语境中，早已不只是简单的负面八卦，它更像是一面镜子，折射出娱乐圈、网红圈乃至社会热点事件背后复杂的人性与利益纠葛。本专题旨在为关注娱乐动态、喜欢深度吃瓜的网友提供一个结构清晰、信息聚合的参考页面。无论你是想快速了解某个争议事件的来龙去脉，还是希望从海量碎片信息中梳理出关键节点，这里都能帮你省去东拼西凑的时间。</p>
+                <p>页面聚合了最新黑料爆料、热门话题人物、事件时间线、网友多元观点以及相关资讯。我们不做立场预设，只提供可读性强的整理与索引。适合喜欢追热点、分析人物关系、关注舆论走向的读者收藏。每个模块都经过编辑筛选，兼顾时效性与可读性，让你在信息洪流中保持清醒。</p>
+                <p>如果你是第一次访问，建议先从“热门黑料”和“深度解析”看起，再结合FAQ和评论板块了解不同视角。后续我们会持续追踪事件进展，更新频率保持在每日多次，欢迎随时回来刷新。</p>
+            </div>
+        </section>
+
+        <!-- 热门推荐 -->
+        <section class="section" id="hot">
+            <div class="section-header">
+                <h2 class="section-title">🔥 热门黑料推荐</h2>
+                <a href="/#latest" class="section-more">查看全部 →</a>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-tag">争议事件</span>
+                    <h3>某顶流恋情反转再反转</h3>
+                    <p class="card-desc">三天内三次剧情反转，从被拍同框到工作室否认再到好友爆料，时间线错综复杂。</p>
+                    <div class="card-meta"><span>热度 98.2万</span><span>更新于 11-07</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">网红圈</span>
+                    <h3>千万粉主播“翻车”实录</h3>
+                    <p class="card-desc">直播言论引发连锁反应，品牌方连夜解约，粉丝群内部分裂，黑料持续发酵中。</p>
+                    <div class="card-meta"><span>热度 87.5万</span><span>更新于 11-07</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">综艺内幕</span>
+                    <h3>某综艺剪辑争议全梳理</h3>
+                    <p class="card-desc">嘉宾镜头分配不均引发粉丝大战，节目组沉默应对，知情人爆料剪辑内幕。</p>
+                    <div class="card-meta"><span>热度 76.1万</span><span>更新于 11-06</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">影视圈</span>
+                    <h3>新剧换角风波背后</h3>
+                    <p class="card-desc">开机前三天主角被换，制片方与经纪公司各执一词，多方爆料指向资本博弈。</p>
+                    <div class="card-meta"><span>热度 68.9万</span><span>更新于 11-06</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">音乐圈</span>
+                    <h3>知名歌手抄袭争议始末</h3>
+                    <p class="card-desc">旋律相似度对比视频疯传，原作者发声，歌手工作室发声明否认，评论区两极分化。</p>
+                    <div class="card-meta"><span>热度 62.3万</span><span>更新于 11-05</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">电竞圈</span>
+                    <h3>职业选手“代打”疑云</h3>
+                    <p class="card-desc">排位记录异常引发质疑，战队紧急调查，选手直播自证清白，黑料真假难辨。</p>
+                    <div class="card-meta"><span>热度 58.7万</span><span>更新于 11-05</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">社会热点</span>
+                    <h3>网红打卡地扰民事件</h3>
+                    <p class="card-desc">居民区被网红带火后日夜喧闹，住户拉横幅抗议，多方协商尚无结果。</p>
+                    <div class="card-meta"><span>热度 51.2万</span><span>更新于 11-04</span></div>
+                </div>
+                <div class="card">
+                    <span class="card-tag">短视频</span>
+                    <h3>剧情博主“剧本”穿帮合集</h3>
+                    <p class="card-desc">细心网友逐帧分析发现多处穿帮镜头，博主承认有剧本，粉丝直呼被骗。</p>
+                    <div class="card-meta"><span>热度 47.8万</span><span>更新于 11-04</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section" id="latest">
+            <div class="section-header">
+                <h2 class="section-title">📆 最新黑料动态</h2>
+                <a href="/#news" class="section-more">资讯速递 →</a>
+            </div>
+            <div class="update-list">
+                <div class="update-item"><span class="update-name">顶流恋情反转事件</span><span class="update-time">11-07 14:20</span><span class="update-summary">疑似第三位当事人发文回应，信息量巨大</span></div>
+                <div class="update-item"><span class="update-name">千万粉主播翻车</span><span class="update-time">11-07 11:05</span><span class="update-summary">品牌方删除合作海报，直播间暂时关闭</span></div>
+                <div class="update-item"><span class="update-name">综艺剪辑争议</span><span class="update-time">11-07 09:30</span><span class="update-summary">节目组发声明称“剪辑符合流程”，网友不买账</span></div>
+                <div class="update-item"><span class="update-name">新剧换角风波</span><span class="update-time">11-06 22:15</span><span class="update-summary">原定主演发长文控诉，制片方暂未回应</span></div>
+                <div class="update-item"><span class="update-name">歌手抄袭争议</span><span class="update-time">11-06 18:40</span><span class="update-summary">原作者工作室发布律师函，要求公开道歉</span></div>
+                <div class="update-item"><span class="update-name">电竞选手代打疑云</span><span class="update-time">11-06 15:10</span><span class="update-summary">联盟官方宣布介入调查，7个工作日出结果</span></div>
+                <div class="update-item"><span class="update-name">网红打卡地扰民</span><span class="update-time">11-06 10:00</span><span class="update-summary">街道办组织协调会，网红方未到场</span></div>
+                <div class="update-item"><span class="update-name">剧情博主剧本穿帮</span><span class="update-time">11-05 20:30</span><span class="update-summary">博主发视频回应：承认有剧本，但称是行业常态</span></div>
+                <div class="update-item"><span class="update-name">某综艺嘉宾罢录</span><span class="update-time">11-05 16:45</span><span class="update-summary">知情人爆料录制现场发生激烈争执</span></div>
+                <div class="update-item"><span class="update-name">电影路演取消</span><span class="update-time">11-05 12:00</span><span class="update-summary">官方称“技术原因”，网友猜测与近期黑料有关</span></div>
+            </div>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section" id="category">
+            <div class="section-header">
+                <h2 class="section-title">📂 黑料分类索引</h2>
+                <a href="/#hot" class="section-more">全部黑料 →</a>
+            </div>
+            <div class="category-grid">
+                <a href="/#hot" class="category-item">明星恋情</a>
+                <a href="/#hot" class="category-item">网红翻车</a>
+                <a href="/#hot" class="category-item">综艺内幕</a>
+                <a href="/#hot" class="category-item">影视换角</a>
+                <a href="/#hot" class="category-item">音乐抄袭</a>
+                <a href="/#hot" class="category-item">电竞争议</a>
+                <a href="/#hot" class="category-item">社会热点</a>
+                <a href="/#hot" class="category-item">短视频剧本</a>
+            </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="section" id="analysis">
+            <div class="section-header">
+                <h2 class="section-title">📝 深度解析：黑料背后的传播逻辑与吃瓜心态</h2>
+            </div>
+            <div class="deep-analysis">
+                <p>在信息过载的娱乐生态中，“黑料”之所以能快速吸引眼球，本质上是因为它满足了受众对真实感、冲突感和参与感的深层需求。一个事件从被曝光到发酵，往往遵循着相似的路径：先是匿名爆料或截图流出，接着KOL转发引爆，然后各方利益相关者轮番回应，最后在网友的二次创作和玩梗中逐渐偏离原始事实。本专题的深度解析模块，正是希望帮你在喧嚣中还原关键脉络。</p>
+                <p>从题材看，黑料可以粗略分为私德争议、职业失范、言论翻车、资本博弈、粉丝冲突等几大类。不同类型的传播寿命和影响范围差异巨大。私德争议往往来得快去得也快，除非有持续实锤；而职业失范和资本博弈则可能引发行业层面的连锁反应，甚至改变某些项目的走向。理解这些分类，能帮你更高效地判断一条黑料值得投入多少注意力。</p>
+                <p>人物关系是黑料传播中的核心线索。很多看似突然的爆料，背后往往牵扯着长期的利益纠葛或人际矛盾。我们在“人物关系”维度上做了尽可能的梳理，包括合作过的项目、公开互动的时间线、以及各自所属的阵营。但需要提醒的是，网络信息真假掺杂，任何单一信源都不足以还原全貌，建议交叉比对后再形成判断。</p>
+                <p>节奏与消费体验方面，黑料事件通常有“爆发期—高潮期—消退期”三个阶段。爆发期信息密度最大但噪音也最多，适合快速浏览建立印象；高潮期各路人马下场，观点碰撞最激烈，适合深度阅读和独立思考；消退期往往会出现总结性长文或反转，适合回头复盘。本页面通过最新动态、热门推荐、评论和资讯几个模块，对应不同阶段的消费需求，你可以根据自己的时间充裕程度灵活选择。</p>
+                <p>适合人群方面，黑料专题对娱乐八卦爱好者、内容创作者、公关从业者以及社会学观察者都有参考价值。但我们也想强调，吃瓜需有度，理性看待网络信息，不传播未经核实的内容，不参与网络暴力，是每个读者应有的底线。页面只做信息聚合与索引，不对任何事件下定性结论。</p>
+                <p>最后，关于同类内容比较：与单纯的营销号搬运不同，本页面更注重结构化和可读性，力求把碎片信息整理成有逻辑的专题；与严肃新闻报道相比，我们保留了网络讨论的多元语气，但会尽量标注信息的不确定性。如果你搜索“黑料”是想了解事件真相或各方观点，这个页面会是一个不错的起点。</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">❓ 关于黑料的常见问题</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-q">黑料页面主要收录什么类型的内容？</div>
+                    <div class="faq-a">主要收录娱乐圈、网红圈、综艺影视、音乐电竞等领域的争议事件与内幕爆料，包括事件时间线、人物关系梳理、各方回应以及网友多元评论，帮助读者快速了解来龙去脉。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何判断一条黑料的可信度？</div>
+                    <div class="faq-a">建议交叉比对多个信源，关注是否有实锤证据（如录音、视频、文件），同时留意爆料者的立场和动机。页面会尽量标注信息来源，但最终判断仍需读者自行斟酌。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">黑料内容更新频率是怎样的？</div>
+                    <div class="faq-a">热门事件在爆发期会保持每日多次更新，常规内容每日更新一到两次。最新动态模块会显示具体更新时间，方便你追踪进展。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">页面上的评论是真实的吗？</div>
+                    <div class="faq-a">评论板块模拟了真实网友的多元观点，包括推荐、吐槽、期待、分析等不同语气，用于呈现舆论场的多样性。所有昵称均为虚构，不代表任何真实用户。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">为什么有些黑料后来反转了？</div>
+                    <div class="faq-a">网络信息本身具有流动性和不确定性，早期爆料可能存在片面或失实。页面会尽量跟进后续进展，在最新动态中标注反转或澄清信息，建议持续关注。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">黑料专题适合哪些人浏览？</div>
+                    <div class="faq-a">适合娱乐八卦爱好者、内容创作者、公关从业者以及对社会舆情感兴趣的读者。建议保持理性心态，不传播未经核实的信息，不参与网络暴力。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 评论 -->
+        <section class="section" id="comments">
+            <div class="section-header">
+                <h2 class="section-title">💬 网友热评</h2>
+                <a href="/#comments" class="section-more">更多评论 →</a>
+            </div>
+            <div class="comment-grid">
+                <div class="comment-card"><div class="comment-user">吃瓜不吐籽</div><div class="comment-date">11-07 13:22</div><div class="comment-text">顶流那个反转看得我头晕，建议直接出时间线图，文字太乱了。</div></div>
+                <div class="comment-card"><div class="comment-user">理性围观选手</div><div class="comment-date">11-07 12:40</div><div class="comment-text">主播翻车这事，品牌方反应比粉丝还快，现实得让人想笑。</div></div>
+                <div class="comment-card"><div class="comment-user">综艺老粉</div><div class="comment-date">11-07 11:15</div><div class="comment-text">剪辑争议每年都有，但这次镜头分配确实离谱，节目组不出来走两步？</div></div>
+                <div class="comment-card"><div class="comment-user">换角吃瓜人</div><div class="comment-date">11-07 10:05</div><div class="comment-text">新剧换角那个，原定主演的长文写得挺真诚的，希望有个说法。</div></div>
+                <div class="comment-card"><div class="comment-user">耳尖听众</div><div class="comment-date">11-06 23:50</div><div class="comment-text">抄袭争议的对比视频我听了，前奏确实像，但后面走向不同，等专业鉴定吧。</div></div>
+                <div class="comment-card"><div class="comment-user">峡谷观察员</div><div class="comment-date">11-06 21:30</div><div class="comment-text">电竞代打这事，联盟调查结果出来之前谁都不好说，让子弹飞一会儿。</div></div>
+                <div class="comment-card"><div class="comment-user">本地住户</div><div class="comment-date">11-06 19:12</div><div class="comment-text">网红打卡扰民真的烦，我们小区也被类似的事困扰过，支持居民维权。</div></div>
+                <div class="comment-card"><div class="comment-user">短视频研究员</div><div class="comment-date">11-06 16:45</div><div class="comment-text">剧情博主穿帮合集笑死，但承认有剧本也算坦诚，比硬撑的好。</div></div>
+                <div class="comment-card"><div class="comment-user">中立吃瓜</div><div class="comment-date">11-06 14:20</div><div class="comment-text">黑料看多了容易上头，建议大家适度，别太代入。</div></div>
+                <div class="comment-card"><div class="comment-user">音乐杂食党</div><div class="comment-date">11-06 11:08</div><div class="comment-text">歌手那边律师函都发了，看来是要硬刚，蹲一个后续。</div></div>
+                <div class="comment-card"><div class="comment-user">追剧小透明</div><div class="comment-date">11-05 22:33</div><div class="comment-text">电影路演取消说是技术原因，但时间点太巧了，难免让人联想。</div></div>
+                <div class="comment-card"><div class="comment-user">综艺路人甲</div><div class="comment-date">11-05 20:15</div><div class="comment-text">嘉宾罢录那个，现场到底吵成什么样啊，有没有更详细的爆料？</div></div>
+                <div class="comment-card"><div class="comment-user">资深瓜农</div><div class="comment-date">11-05 18:00</div><div class="comment-text">这个专题整理得还行，至少不用自己到处翻截图了，收藏了。</div></div>
+                <div class="comment-card"><div class="comment-user">冷静看客</div><div class="comment-date">11-05 15:40</div><div class="comment-text">很多黑料过两天就没人讨论了，真正该关注的是背后的问题。</div></div>
+                <div class="comment-card"><div class="comment-user">娱乐小报童</div><div class="comment-date">11-05 13:25</div><div class="comment-text">希望更新能快一点，每次刷都有新瓜就最好了。</div></div>
+                <div class="comment-card"><div class="comment-user">反矫情达人</div><div class="comment-date">11-05 10:10</div><div class="comment-text">有些爆料明显是带节奏的，大家看的时候多留个心眼吧。</div></div>
+            </div>
+        </section>
+
+        <!-- 资讯 -->
+        <section class="section" id="news">
+            <div class="section-header">
+                <h2 class="section-title">📰 黑料相关资讯</h2>
+                <a href="/#latest" class="section-more">更多资讯 →</a>
+            </div>
+            <div class="news-grid">
+                <div class="news-card"><div class="news-date">2026-11-07</div><div class="news-title">顶流恋情事件第三位当事人发文，信息量巨大</div><div class="news-summary">疑似知情人士发文回应近期恋情反转，涉及时间线和人物关系，引发新一轮讨论。</div></div>
+                <div class="news-card"><div class="news-date">2026-11-07</div><div class="news-title">品牌方连夜删除主播合作内容，直播间暂时关闭</div><div class="news-summary">千万粉主播翻车事件持续发酵，多个品牌方撤下宣传物料，主播方暂无正式回应。</div></div>
+                <div class="news-card"><div class="news-date">2026-11-06</div><div class="news-title">综艺剪辑争议节目组发声明，网友反应两极</div><div class="news-summary">节目组称剪辑符合流程，但大量网友表示不认可，要求公开原始素材。</div></div>
+                <div class="news-card"><div class="news-date">2026-11-06</div><div class="news-title">原定主演发长文控诉换角，制片方暂未回应</div><div class="news-summary">新剧开机前换角风波升级，原定主演详述沟通过程，舆论关注点转向资本博弈。</div></div>
+                <div class="news-card"><div class="news-date">2026-11-05</div><div class="news-title">音乐抄袭争议原作者发律师函，要求公开道歉</div><div class="news-summary">旋律相似度争议进入法律程序，歌手方此前声明否认抄袭，事件持续升级。</div></div>
+                <div class="news-card"><div class="news-date">2026-11-05</div><div class="news-title">电竞联盟介入调查代打疑云，7个工作日出结果</div><div class="news-summary">职业选手排位记录异常引发质疑，联盟官方宣布调查，战队表示全力配合。</div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-logo">黑料不打烊</div>
+                    <div class="footer-desc">聚合娱乐圈内幕与争议话题，提供深度解析与网友评论。理性吃瓜，不站队不传谣。</div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <p>快速导航</p>
+                        <a href="/#hot">热门黑料</a>
+                        <a href="/#latest">最新动态</a>
+                        <a href="/#analysis">深度解析</a>
+                        <a href="/#faq">常见问题</a>
+                    </div>
+                    <div class="footer-col">
+                        <p>友情链接</p>
+                        <a href="/#">娱乐前线</a>
+                        <a href="/#">吃瓜社区</a>
+                        <a href="/#">热点追踪</a>
+                        <a href="/#">资讯速递</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 黑料专题 · 内容仅供娱乐参考</span>
+                <span>免责声明：本站内容基于网络公开信息整理，不代表证实任何事件，请理性判断。</span>
+            </div>
+        </div>
+    </footer>
+</body>
+                                                                                                                             </html>
